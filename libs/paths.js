@@ -22,7 +22,7 @@ module.exports = function(options) {
       });
     },
     get_or_create_translation: function(vars) {
-      return sprintf(this.base_path + '%(project)s/resource/%(resource)s/translation/%(language)s/', util._extend({
+      return sprintf(this.base_path + '%(project)s/resource/%(resource)s/translation/%(language)s/?mode=onlytranslated', util._extend({
         project: options.project
       }, vars));
     },
